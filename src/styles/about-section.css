@@ -1,0 +1,422 @@
+.aboutus{
+  /* background-color: blue; */
+  padding-top: 15%;
+}
+.about-mainimg1{
+  width: 100%;
+  margin: 10px 0 0 0;
+  padding: 2px 10px;
+  border-radius: 30%;
+}
+.aboutus-text{
+  margin: 0 12px 10px 10px;
+}
+
+.aboutus-head1{
+  color: #084bd1;
+}
+
+.aboutus-head1,.aboutus-head2{
+  margin: 5px;
+}
+.aboutus-para{
+  margin: 5px 0 0 5px;
+  color: #CCCFD6;
+  font-size: smaller;
+}
+
+.aboutus-boxes{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2px;
+}
+
+.box1,.box2,.box3{
+  margin: 10px;
+  /* background-color: #a6a6a6; */
+  box-shadow: 0px 2px 5px #a6a6a6;
+  border-radius: 10px;
+  padding: 10px;
+  width: 60%;
+  /* z-index: +1; */
+}
+.box1-para,.box2-para,.box3-para{
+  font-size: 0.5em;
+  color: #a6a6a6;
+  margin: 5px 0;
+}
+
+
+/* CSS for Container-2 : We bring Comfort Panel  */
+.comfort-panel{
+  padding: 10px;
+}
+
+.comfortpanel-pic{
+  border-radius: 20px;
+  width: 100%;
+  margin: 0 0 15px 0;
+  padding-top: 10%;
+}
+
+.textpanel{
+  width: 100%;
+  font-size: 0.8em;
+}
+
+.comfort-head1{
+  margin: 10px 0 10px 0;
+  color: #084bd1;
+}
+.comfort-head2{
+  margin: 10px 0 10px 0;
+  width: 70%;
+}
+.comfort-para{
+  color: #CCCFD6;
+}
+
+.comfortBtn{
+  margin: 20px 0 0 10px;
+  border: none;
+  font-size: 0.8em;
+  padding: 10px;
+  background-color: #084bd1;
+  color: #fff;
+  border-radius: 10px;
+  font-size: 0.7em;
+}
+
+.bluedots{
+  width: 20%;
+  position:relative;
+  top: 40px;
+  left: -30px;
+  z-index: -1;
+}
+.down-arr1{
+  background-color: #084bd1;
+}
+
+/* CSS for Container-3 : Why Choose Us Panel */
+.choose-panel{
+  margin: 50px 0 0 10px ;
+}
+.choose-head1{
+  margin: 0 0 10px 0;
+  color: #084bd1;
+}
+.choose-head2{
+  margin: 0 0 10px 0;
+  width: 80%;
+  font-weight: 500px;
+}
+.choose-para{
+  margin: 0 0 10px 0;
+  color: #CCCFD6;
+}
+
+.prg-container{
+  /* background-color: grey; */
+  margin: 20px 20px 0 0 ;
+}
+.prg1{
+  /* background-color: grey; */
+  height: 5px;
+  width: 100%;
+  margin: 5px 0 0 0;
+  display: flex;
+}
+.pA1{
+  background-color: #084bd1;
+  width: 90%;
+  border-radius: 10px;
+}
+.pA2{
+  background-color: #CCCFD6;
+  width: 10%;
+  border-radius: 10px;
+  
+}
+.prg2{
+  height: 5px;
+  /* background-color: #084bd1; */
+  width: 100%;
+  border-radius: 10px;
+  margin: 5px 0 0 0;
+  display: flex;
+}
+.pB1{
+  background-color: #084bd1;
+  width: 80%;
+  border-radius: 10px;
+}
+.pB2{
+  border-radius: 10px;
+  background-color: #CCCFD6;
+  width: 20%;
+}
+.prg3{
+  height: 5px;
+  /* background-color: #084bd1; */
+  width: 100%;
+  border-radius: 10px;
+  margin: 5px 0 0 0;
+  display: flex;
+}
+.pC1{
+  border-radius: 10px;
+  background-color: #084bd1;
+  width: 95%;
+}
+.pC2{
+  border-radius: 10px;
+  background-color: #CCCFD6;
+  width: 5%;
+}
+.prg4{
+  height: 5px;
+  /* background-color: #084bd1; */
+  width: 100%;
+  border-radius: 10px;
+  margin: 5px 0 0 0;
+  display: flex;
+}
+.pD1{
+  border-radius: 10px;
+  background-color: #084bd1;
+  width: 85%;
+}
+.pD2{
+  border-radius: 10px;
+  background-color: #CCCFD6;
+  width: 15%;
+}
+label{
+font-size: 0.7em;
+}
+
+.ad-boxes{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  font-size: 0.8em;
+  /* background-color: grey; */
+  margin: 20px 10px 0 0;
+  padding: 15px;
+  width: 90%;
+  
+}
+
+.adbox1, .adbox2, .adbox3,.adbox4{
+  margin: 2px;
+  padding: 15px;
+  box-shadow: -5px 5px 12px #a6a6a6;
+  text-align: center;
+  border-radius: 10px;
+}
+.box-para{
+  font-size: 0.6em;
+  margin: 10px 0 0 0;
+}
+.box-head{
+  font-size: 0.95em;
+}
+
+.adbox2{
+  background-color:#084bd1;
+  color: white;
+  position: relative;
+  top: -10px;
+}
+.prg-perc{
+  right: -190px;
+  position: relative;
+}
+.prg-perc3{
+  position: relative;
+  right: -230px;
+}
+
+
+
+/* Css for laptops */
+@media only screen and (min-width: 321px) {
+  *{
+      font-family: 'Poppins', sans-serif;
+      
+  }
+  .navbar{
+      display:flex;
+      align-items: center;
+      justify-items: center;
+      height: 15%; 
+      box-shadow: -2px 2px 10px #a6a6a6;
+  }
+  .website-logo{
+      width: 10%;
+      margin-left: 5%;
+  }
+  .sidebar-menulogo{
+      display: none; 
+  }
+  .sidebar{
+      display: none;
+  }
+  .navbar-options{
+      display: flex;
+      align-items: center;
+      justify-content: space-evenly;
+      /* background-color: grey; */
+      width: 50%;
+      margin-right: 25%;
+
+  }
+  .opts{
+     display: flex;
+     text-decoration: none;
+  }
+  .a{
+      color: black;
+      font-weight: bold;
+  }
+  .a:hover{
+      color: #ED8802;
+      font-weight: bold;
+  }
+
+  /* CSS for Container-1 : AboutUs Panel */
+  .aboutus{
+      /* background-color: blue; */
+      padding-top: 8%;
+      display: flex;
+  }
+  .about-mainimg1{
+    width: 100%;
+    margin: 10px 0 0 0;
+    padding: 0px 10px;
+    border-radius: 20px;
+  }
+  .aboutus-text{
+      display: flexbox;
+      /* background-color: blue; */
+      padding-top: 10%;
+      position: relative;
+      
+
+  }
+  .abt-text{
+      position: inherit;
+      margin: 25px ;
+      left: 90px;
+      width: 75%;
+      font-size: 1.5em;
+  }
+  
+  .aboutus-boxes{
+     position: inherit;
+     left: -95px;
+     top: 50px;
+     width: 80%;
+     font-size: 1.2em;
+     
+  }
+  
+  .box1,.box2,.box3{
+      padding: 20px;
+      font-size: 1.2em;
+      background-color: white;
+      /* z-index: -1; */
+      text-align: center;
+  }
+  .box1-para,.box2-para,.box3-para{
+      margin: 0 0;
+  }
+
+
+  /* CSS for Container-2 : We bring Comfort Panel  */
+  .comfort-panel{
+      display: flex;
+      flex-direction: row-reverse;
+  }
+  .comfort-pic{
+      width: 100%;
+      margin-right: 5%;
+  }
+  .textpanel{
+      font-size: 1.1em;
+      margin: 0 0 0 50px;
+      
+      /* background-color: grey; */
+  }
+  .comfort-head1{
+      margin-bottom: 6%;
+      margin-top: 8%;
+  }
+  .comfort-head2{
+      margin-bottom: 5%;
+      width: 50%;
+  }
+  .comfort-para{
+      width: 75%;
+  }
+  .comfort-dec{
+      position: relative;
+      z-index: -1;
+      /* background-color: grey; */
+      width: 30%;
+      top: -150px;
+      margin: 0 0 0 50px;
+      font-size: 1.4em;
+  }
+  .bluedots{
+      width: 20%;
+      position: relative;
+      padding-top: 30%;
+      top: 60px;
+      left: -50px;
+      z-index: -1;
+  }
+
+  /* CSS for Container-3 : Why Choose Us Panel */
+  .choose-panel{
+      margin:20px 50px;
+      display:flex;
+  }
+  .progress-tab{
+      width: 60%;
+      font-size: 1.2em;
+      margin: 0 20% 0 0 ;
+  }
+  .ad-boxes{
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
+      width: 40%;
+      position: relative;
+      z-index: -1;
+      left: -150px;
+      top: -80px;
+  }
+  
+  .adbox1, .adbox2, .adbox3,.adbox4{
+      /* margin: 2px;*/
+      padding: 45px; 
+      box-shadow: -5px 5px 12px #a6a6a6;
+      text-align: center;
+      border-radius: 10px;
+      font-size: 1.5em;
+  }
+  .prg-perc{
+      right: -500px;
+      position: relative;
+      z-index: -1;
+  }
+  .prg-perc3{
+      right: -560px;
+      position: relative;
+      z-index: -1;
+  }
+ 
+}
