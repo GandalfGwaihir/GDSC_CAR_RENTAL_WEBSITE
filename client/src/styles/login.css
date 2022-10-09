@@ -1,0 +1,61 @@
+.login{
+    margin: 0 0;
+    text-decoration: none;
+    box-sizing: border-box;
+    background-color: black;
+    background-image: url("https://wallpapercave.com/wp/wp7034680.jpg");
+    background-size:contain;
+    background-repeat: no-repeat
+    ;
+    background-size: 60%;
+    height: 110vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #d2d1d1;
+}
+.login-container{
+    position: relative;
+    right: -400px;
+    background-color: #121212;
+    padding: 35px;
+    width: 30%;
+    border-radius: 5px;
+
+}
+.login-password,.login-email{
+    margin: 0 0 10px 0;
+    width: 100%;
+    background-color: #232323;
+    border: none;
+    padding: 5px;
+    text-indent: 10px;
+}
+.login-submit{
+    padding: 5px;
+    border-radius: 5px;
+    /* border:none; */
+    background-color: #232323;
+    border: none;
+    background-color: #d2d1d1;
+    padding: 5px 20px;
+}
+
+.login-submit:hover{
+    cursor: pointer;
+    background-color: #ED8802;
+    color: white;
+    transition: background-color 0.3s;
+}
+.login-header{
+    color: #d2d1d1;
+}
+
+label{
+    margin-bottom: 10px;
+}
+.login-para{
+    color: grey;
+}
+

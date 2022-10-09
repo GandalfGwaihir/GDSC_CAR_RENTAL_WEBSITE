@@ -1,6 +1,6 @@
 .header__top {
   padding: 10px 0px;
-  background: #1E3658;
+  /* background: #1E3658; */
   color: #fff;
 }
 
@@ -145,7 +145,7 @@
 }
 
 .nav__item:hover {
-  color: #171613;
+  color: #ED8802;
 }
 
 .search__box {

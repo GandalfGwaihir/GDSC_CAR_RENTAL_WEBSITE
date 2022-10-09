@@ -19,7 +19,7 @@ export default function AboutSection(){
              <div className="aboutus">
                  
  
-                 <img src="https://www.gran-turismo.com/images/c/i1m4aMY98XQup8E.jpg" alt="image1" className="about-mainimg1"/>
+                 <img src="https://c4.wallpaperflare.com/wallpaper/958/961/157/nissan-gt-r-nissan-skyline-gt-r-r35-car-gran-turismo-5-wallpaper-preview.jpg" alt="image1" className="about-mainimg1"/>
                  
  
                  <div className="aboutus-text">
@@ -34,7 +34,7 @@ export default function AboutSection(){
                  <div className="aboutus-boxes">
  
                      <div className="box1">
-                             <h6>Sports Car</h6>             <p className="box1-para">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cum, ad.</p>
+                             <h6>Sports Car</h6><p className="box1-para">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cum, ad.</p>
                      
                      </div>
                              {/* <img src="./images/bluedots.png" alt="bluedots" className="dots" /> */}
