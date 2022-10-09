@@ -77,8 +77,8 @@ const Header = () => {
               className=" d-flex align-items-center justify-content-end "
             >
               <button className="header__btn btn ">
-                <Link to="/contact">
-                  <i class="ri-phone-line"></i> Request a call
+                <Link to="/login">
+                  <i ></i> Login/Signup
                 </Link>
               </button>
             </Col>

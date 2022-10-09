@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "../styles/login.css"
+import { Link } from "react-router-dom";
 import { Routes, Route, Navigate } from "react-router-dom";
 const Register = () => {
 
@@ -64,8 +65,12 @@ const Register = () => {
                 className="login-password"
             />
             
-            <p className="login-para">Not Registered? Click here to register</p>
-
+            <p>
+            <Link to="/register">
+                  <i ></i>Not Registered yet? Click here to register
+            </Link>
+            </p>
+            
             <br />
             <input type="submit" value="Login" 
             className="login-submit"/>
