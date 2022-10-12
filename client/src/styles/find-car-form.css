@@ -1,6 +1,6 @@
 .find__cars-left {
   background: linear-gradient(rgb(249, 168, 38, 0.9), rgb(249, 168, 38, 0.9)),
-    url("../assets/all-images/toyota-offer-2.png");
+    url("../assets/all-images/cars-img/bmw-offer.png");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -29,7 +29,7 @@
 }
 
 .form {
-  background: #fff;
+  background: #1E3658;
   padding-top: 55px;
   padding-bottom: 50px;
   padding-left: 15px;
@@ -73,7 +73,7 @@
 }
 
 .find__car-btn {
-  background: #000d6b !important;
+  background: #ED8802 !important;
   color: #fff !important;
   padding: 8px 15px;
   width: 100%;
