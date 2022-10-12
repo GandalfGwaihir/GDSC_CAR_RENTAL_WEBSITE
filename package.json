@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "nodemon": "^2.0.20",
+    "react-slick": "^0.29.0"
+  }
+}

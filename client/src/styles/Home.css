@@ -1,3 +1,4 @@
+
 .box1{
     display: flex;
     justify-content: center;
@@ -26,7 +27,7 @@
 }
 
 .bluedots{
-    width: 10%;
+    width: 20%;
     position:relative;
     top: 40px;
     left: -30px;
@@ -44,7 +45,7 @@
 
 }
 .popularname1{
-    color: #CCCFD6;
+    color: #ED8802;
    
     
 }
@@ -64,6 +65,15 @@
 .car4{
     color: #1E3658;
     margin: 20px;
+}
+.toyotoimg{
+    width: 125px;
+}
+.tataimg{
+    width: 100px;
+}
+.Mercedesimg{
+    width: 100px;
 }
 @media screen and (max-width: 480px) {
     .popularname {
