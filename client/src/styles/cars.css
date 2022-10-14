@@ -1,0 +1,57 @@
+*{
+margin:  0 0;
+box-sizing: border-box;
+text-decoration: none;
+list-style: none;
+}
+
+.carspage{
+    background-color: #CCCFD6;
+    padding: 20px;
+}
+
+.cars{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: max-content;
+}
+
+
+.card{
+    border-radius: 30px;
+    padding: 25px;
+    width: 90%;
+    margin: 10px 0;
+}
+
+.card-image{
+    width: 100%;
+    background-color: grey;
+}
+.card--price--rating{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.card-stats{
+    
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.cardBtn{
+    background-color: #1E3658;
+    text-align: center;
+    width: 50%;
+    margin: 15px auto;
+    border-radius: 15px;
+}
+.cardBtn-text{
+    
+    text-decoration: none;
+    color: white;
+    margin: 5px auto;
+}
+.price{
+    color: #ED8802;
+}
