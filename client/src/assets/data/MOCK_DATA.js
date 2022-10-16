@@ -1,15 +1,15 @@
-[{"id":1,"brand":"Mclaren","model":"720s","image":"../all-images/carspage/720s.png","price":"2000","miles":"8.2","rating":"4..8"},
-{"id":2,"brand":"Lamborghini","model":"Huracan","image":"../all-images/carspage/huracan.png","price":"2500","miles":"7.1","rating":"5"},
-{"id":3,"brand":"Bugatti","model":"Chirron","image":"../all-images/carspage/chirron.png","price":"2600","miles":"5.95","rating":"5"},
-{"id":4,"brand":"Chevrolet","model":"Corvette","image":"../all-images/carspage/corvette.png","price":"2000","miles":"8.2","rating":"4.8"},
-{"id":5,"brand":"Porche","model":"Cayman","image":"../all-images/carspage/cayman.png","price":"1700","miles":"15","rating":"4.2"},
-{"id":6,"brand":"Mazda","model":"MX-5","image":"../all-images/carspage/mx5.png","price":"1500","miles":"10","rating":"3.7"},
-{"id":7,"brand":"Porche","model":"911","image":"../all-images/carspage/911.png","price":"1900","miles":"5.95","rating":"4.6"},
-{"id":8,"brand":"Nissan","model":"GTR","image":"../all-images/carspage/gtr.png","price":"2200","miles":"8.2","rating":"4.6"},
-{"id":9,"brand":"BMW","model":"M4","image":"../all-images/carspage/m4.png","price":"1600","miles":"16","rating":"3.9"},
-{"id":10,"brand":"Toyota","model":"Supra","image":"../all-images/carspage/supra.png","price":"2100","miles":"12","rating":"3.9"},
-{"id":11,"brand":"Ford","model":"Mustang","image":"../all-images/carspage/mustang.png","price":"2400","miles":"7","rating":"4.6"},
-{"id":12,"brand":"Audi","model":"TT","image":"../all-images/carspage/tt.png","price":"1900","miles":"8.9","rating":"4.4"},
+const data = [{"id":1,"brand":"Mclaren","model":"720s","image":require("../all-images/carspage/720s.png"),"price":"2000","miles":"8.2","rating":"4.8"},
+{"id":2,"brand":"Lamborghini","model":"Huracan","image":require("../all-images/carspage/huracan.png"),"price":"2500","miles":"7.1","rating":"5"},
+{"id":3,"brand":"Bugatti","model":"Chirron","image":require("../all-images/carspage/chirron.png"),"price":"2600","miles":"5.95","rating":"5"},
+{"id":4,"brand":"Chevrolet","model":"Corvette","image":require("../all-images/carspage/corvette.png"),"price":"2000","miles":"8.2","rating":"4.8"},
+{"id":5,"brand":"Porche","model":"Cayman","image":require("../all-images/carspage/cayman.png"),"price":"1700","miles":"15","rating":"4.2"},
+{"id":6,"brand":"Mazda","model":"MX-5","image":require("../all-images/carspage/mx5.png"),"price":"1500","miles":"10","rating":"3.7"},
+{"id":7,"brand":"Porche","model":"911","image":require("../all-images/carspage/911.png"),"price":"1900","miles":"5.95","rating":"4.6"},
+{"id":8,"brand":"Nissan","model":"GTR","image":require("../all-images/carspage/gtr.png"),"price":"2200","miles":"8.2","rating":"4.6"},
+{"id":9,"brand":"BMW","model":"M4","image":require("../all-images/carspage/m4.png"),"price":"1600","miles":"16","rating":"3.9"},
+{"id":10,"brand":"Toyota","model":"Supra","image":require("../all-images/carspage/supra.png"),"price":"2100","miles":"12","rating":"3.9"},
+{"id":11,"brand":"Ford","model":"Mustang","image":require("../all-images/carspage/mustang.png"),"price":"2400","miles":"7","rating":"4.6"},
+{"id":12,"brand":"Audi","model":"TT","image":require("../all-images/carspage/tt.png"),"price":"1900","miles":"8.9","rating":"4.4"},
 
 {"id":13,"brand":"Dodge","model":"Ram"},
 {"id":14,"brand":"Chevrolet","model":"Express 3500"},
@@ -100,3 +100,5 @@
 {"id":99,"brand":"Plymouth","model":"Grand Voyager"},
 {"id":100,"brand":"Lincoln","model":"Continental"}
 ]
+
+export default data;
