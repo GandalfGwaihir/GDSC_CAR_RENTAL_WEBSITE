@@ -55,3 +55,12 @@ list-style: none;
 .price{
     color: #ED8802;
 }
+
+
+.price-icon{
+    color: #ED8802;
+    font-size: 20px;
+    margin-right: 5px;
+    width: 1 px;
+    height: 1 px;
+}

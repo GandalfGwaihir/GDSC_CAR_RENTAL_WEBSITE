@@ -94,6 +94,7 @@ const Home = () => {
       <div className="tata">
       <h2 className='car4'>TATA</h2>
       <img src={tata} alt="" className='tataimg' />
+      
       </div>
     </div>
    
