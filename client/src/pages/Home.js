@@ -21,16 +21,56 @@ import  bmw from "../assets/all-images/bmw.jpg";
 import  lamborghini from "../assets/all-images/lamborghini.jpg";
 import  tata from "../assets/all-images/tata.jpg";
 import  toyoto from "../assets/all-images/toyoto.jpg";
+import driveImg from "../assets/all-images/drive.jpg";
+import HomeSection from '../components/UI/HomeSection';
+import img1 from "../assets/all-images/img1.jpg";
+
 
 
 const Home = () => {
     return (
         <>
+       
        {/* ============= hero section =========== */}
       <section className="p-0 hero__slider-section">
-        <HeroSlider />
+        
+      <div className="comfort-panel">
+                 <div className="comfort-pic">
+                 <img src={img1} alt="" className="comfortpanel-pic"/>
+                 </div>
+ 
+                 <div className="textpanel">
+                 <h4 className="comfort-head1">THE BEST WAY OF RENTING A CAR</h4>
+ 
+                 <h2 className="comfort-head2">Need a ride? We have you all covered</h2>
+                 
+                 <button className="comfortBtn" > MORE ABOUT US
+                 
+                 </button>
+                 
+                 <img src="https://identityink.com/wp-content/uploads/2021/04/Group-8.png" alt="bluedots" className="bluedots" />
+                 
+ 
+                 
+                 </div>
+             </div>
+ 
+                 
+        {/* <div className='frontpagepara'>THE BEST WAY OF RENTING A CAR</div>
+        <div className="frontpagepara1">Need a ride? We have you all covered </div>
+        <div className="comfort-dec">
+                 <button className="comfortBtn">MORE ABOUT US
+                 
+                 </button>
+                 <img src="https://identityink.com/wp-content/uploads/2021/04/Group-8.png" alt="bluedots" className="bluedots" />
+                 </div> */}
+        {/* <img src="https://identityink.com/wp-content/uploads/2021/04/Group-8.png" alt="bluedots" className="bluedots" /> */}
+        
+        {/* <HeroSlider /> */}
+        
+        
 
-        <div className="hero__form">
+        {/* <div className="hero__form">
           <Container>
             <Row className="form__row">
               <Col lg="4" md="4">
@@ -44,13 +84,13 @@ const Home = () => {
               </Col>
             </Row>
           </Container>
-        </div>
+        </div> */}
       </section>
         {/* <Testimonial/> */}
        
         {/* <Slider/> */}
         {/* ========== services section ============ */}
-      <section>
+      {/* <section>
         <Container>
           <Row>
             <Col lg="12" className="mb-5 text-center">
@@ -61,9 +101,9 @@ const Home = () => {
             <ServicesList />
           </Row>
         </Container>
-      </section>
+      </section> */}
       {/* =========== testimonial section =========== */}
-      <section>
+      {/* <section>
         <Container>
           <Row>
             <Col lg="12" className="mb-4 text-center">
@@ -74,7 +114,7 @@ const Home = () => {
             <Testimonial />
           </Row>
         </Container>
-      </section>
+      </section> */}
       
         <div className="popularname">
       <div className="popularname1">Popular Brands
