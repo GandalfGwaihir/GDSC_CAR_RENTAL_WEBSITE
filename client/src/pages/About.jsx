@@ -21,7 +21,7 @@ const About = () => {
           <Row>
             <Col lg="6" md="6" sm="12">
               <div className="about__page-img">
-                <img src={driveImg} alt="" className="w-100 rounded-3" />
+                <img src={driveImg} alt="" className="about-mainimg1" />
               </div>
             </Col>
 

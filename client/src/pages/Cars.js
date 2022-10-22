@@ -2,6 +2,7 @@ import "../styles/cars.css"
 import data from "../assets/data/MOCK_DATA.js"
 import React from "react"
 import { useState } from "react"
+import productCard from "./Productcard"
 
 import { Link } from "react-router-dom"
 
@@ -15,7 +16,7 @@ export default function Cars() {
         <div className="carspage">
                 <h1 className="cars-header">Car Rental</h1>
 
-                <input type="text" placeholder="Search" onChange={event => {
+                <input type="text"  className="searchbar" placeholder="Search" onChange={event => {
                     setSearchterm(event.target.value)
                 }} />
             <div className="cars">
@@ -30,10 +31,11 @@ export default function Cars() {
                 return (
                 <div className="cards-container">
                 <div className="card" key={key}>
+                    
                
 
                 <img src={val.image} alt="car-image" className="card-image" />
-
+                    {/* <p>Card ID:{val.id}</p> */}
                 <h8>Sports Car</h8>
 
                 <h4 className="card--header">{val.brand} {val.model}</h4>
@@ -64,7 +66,7 @@ export default function Cars() {
                 </div>
 
                 <div className="cardBtn">
-                    <Link to="#">
+                    <Link to="/productcard">
                     <p className="cardBtn-text">
                     Rent Now
                     </p>

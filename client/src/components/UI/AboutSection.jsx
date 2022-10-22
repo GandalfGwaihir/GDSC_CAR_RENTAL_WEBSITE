@@ -2,6 +2,7 @@ import React from "react";
 import { Container, Row, Col } from "reactstrap";
 import "../../styles/about-section.css";
 import aboutImg from "../../assets/all-images/cars-img/bmw-offer.png";
+import aboutmainImg from "../../assets/all-images/about1.jpg";
 
 export default function AboutSection(){
   const [isShown,setIsShown] = React.useState(true);
@@ -13,7 +14,7 @@ export default function AboutSection(){
  
      return (
          <div className="about">
-             
+                
  
              {/* first container having about us section */}
              <div className="aboutus">

@@ -25,8 +25,9 @@ list-style: none;
 }
 
 .card-image{
-    width: 100%;
-    background-color: grey;
+    /* height: 110%; */
+    /* background-color: #1E3658; */
+    margin: 60px;
 }
 .card--price--rating{
     display: flex;
@@ -63,4 +64,12 @@ list-style: none;
     margin-right: 5px;
     width: 1 px;
     height: 1 px;
+}
+
+.searchbar{
+    border: none;
+    padding: 5px;
+    border-radius: 10px;
+    text-indent: 10px;
+    width: 25%;
 }

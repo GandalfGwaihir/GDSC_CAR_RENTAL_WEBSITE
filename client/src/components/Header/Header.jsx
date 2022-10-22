@@ -17,11 +17,6 @@ const navLinks = [
     path: "/cars",
     display: "Cars",
   },
-
-  {
-    path: "/blogs",
-    display: "Blog",
-  },
   {
     path: "/contact",
     display: "Contact",
@@ -59,7 +54,7 @@ const Header = () => {
             </Col>
 
             <Col lg="3" md="3" sm="4">
-              <div className="header__location d-flex align-items-center gap-2">
+              <div className="header__location d-flex align-items-center justify-between gap-2">
                 <span>
                   <i class="ri-time-line"></i>
                 </span>
@@ -76,11 +71,12 @@ const Header = () => {
               sm="0"
               className=" d-flex align-items-center justify-content-end "
             >
-              <button className="header__btn btn ">
+              {/* <button className="header__btn btn ">
                 <Link to="/login">
-                  <i ></i> Login/Signup
+                  
+                  Login/Signup
                 </Link>
-              </button>
+              </button> */}
             </Col>
           </Row>
         </Container>
