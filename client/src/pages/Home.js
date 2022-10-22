@@ -79,9 +79,9 @@ const Home = () => {
                 </div>
               </Col>
 
-              <Col lg="8" md="8" sm="12">
+              {/* <Col lg="8" md="8" sm="12">
                 <FindCarForm />
-              </Col>
+              </Col> */}
             </Row>
           </Container>
         </div> */}

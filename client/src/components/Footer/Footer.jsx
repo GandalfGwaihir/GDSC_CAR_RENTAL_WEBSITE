@@ -20,11 +20,6 @@ const quickLinks = [
     display: "Car Listing",
   },
   {
-    path: "/blogs",
-    display: "Blog",
-  },
-
-  {
     path: "/contact",
     display: "Contact",
   },
