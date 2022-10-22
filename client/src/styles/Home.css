@@ -4,13 +4,10 @@
     justify-content: center;
     margin: 50px;
 }
-.front{
-    display: flex;
-    flex-direction: column;
-}
 .bluedots1{
-    width: 20px;
+    height: 100px;
 }
+
 .comfort-panel{
     padding: 10px;
   }
@@ -33,20 +30,23 @@
   }
   
   .comfort-head1{
+    width: 250px;
+    
     margin: 100px 0 50px 0;
     
     color: #1E3658;
   }
   .comfort-head2{
-    margin: 10px 0 10px 0;
-    width: 70%;
+    
+    margin: 10px 0 100px 0;
+    width: 400px;
   }
   .comfort-para{
     color: #CCCFD6;
   }
   
   .comfortBtn{
-    /* margin: 20px 0 0 0; */
+    margin: 20px 0 0 0;
     border: none;
     font-size: 0.8em;
     /* padding: 10px; */
@@ -128,6 +128,7 @@
 
 }
 .popularname1{
+    margin-left: 20px;
     color: #ED8802;
 }
 .car1{
