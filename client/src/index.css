@@ -1,97 +1,148 @@
-/* ======== google fonts ======== */
-@import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200;300;400;600;700;900&display=swap");
-
-/* ======= base style ====== */
-* {
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+body {
   margin: 0;
+  font-family: 'Montserrat', sans-serif !important;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: azure;
+}
+body , html{
+  overflow-x: hidden !important;
+}
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+.bs1{
+  box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+}
+.ant-row{
+  margin: 0 20 !important;
+}
+.spinner{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 9999;
+}
+h1{
+  font-size: 30px;
+  font-weight: bold;
+  color : orangered;
+}
+p{
+  margin: 5px !important;
+  
   padding: 0;
-  box-sizing: border-box;
-  font-family: "Source Sans Pro", sans-serif;
 }
-
-/* ========= pre-define css ========= */
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  color: #000d6b;
-  font-weight: 600;
-  margin-bottom: 0;
+.btn1{
+  box-shadow: none !important;
+  background-color : white !important;
+  color: orangered !important;
+  border: 1px solid orangered !important;
+  padding: 5px 15px !important;
+  outline: none !important;
 }
-
-h3,
-h4 {
-  font-size: 1.6rem;
-}
-
-h5,
-h6 {
-  font-size: 1.2rem;
-}
-
-a {
-  text-decoration: none;
-  color: unset;
-}
-
-a:hover {
-  color: unset;
-}
-
-ul {
-  margin: 0;
-  list-style: none;
-}
-
-.section__title {
-  color: #000d6b;
-  font-weight: 600;
-  font-size: 2rem;
-}
-
-.section__subtitle {
-  color: #f9a826;
-  font-weight: 600;
-  font-size: 1.2rem;
-}
-
-.section__description {
-  color: #7c8a97;
-  font-size: 0.9rem;
-  line-height: 30px;
-}
-
-section {
-  padding: 50px 0px;
-}
-
-.btn {
-  padding: 7px 15px;
-  background: #000d6b;
-  color: #fff;
+.bt1:focus{
   border: none;
-  outline: none;
+}
+button{
+  padding: 3px 10px !important;
+}
+.header{
+  padding: 10px;
+  
+}
+.header .ant-btn{
+  box-shadow: none !important;
+  background-color : white !important;
+  color: orangered !important;
+  border: 1px solid orangered !important;
+  padding: 5px 15px !important;
+  outline: none !important;
+}
+.content{
+  min-height: 90vh;
+  
+}
+.footer{
+  background-color: aliceblue;
+  padding: 10px;
+}
+
+
+/* this is just for ui purpose , no functionality is related */
+.car{
   border-radius: 5px;
+  margin-top: 100px;
+  height: 160px;
   transition: 0.3s;
 }
+.car:hover{
+  height :220px;
+}
+.car:hover > .car-content{
 
-.btn:hover {
-  color: #fff !important;
-  background: #000c6bd0;
+    opacity: 1;
+    transform : translateY(-40px)
+
+}
+.carimg{
+  height:180px;
+  width: auto;
+  border-radius: 5px;
+  transform: translateY(-50px);
+}
+.car-content{
+  transform: translateY(-200px);
+  opacity: 0;
+  transition: 0.3s;
+}
+.login{
+  background-color: black;
+  padding-top: 50px;
+  min-height: 100vh;
+}
+.login label , .login h1{
+  color: white !important;
+  opacity: 0.6;
+}
+.login-form{
+  background-color: #1F1F1F;
+}
+.login-form input{
+  background-color: #333333 !important;
+  border : none !important;
+  color: white;
+  opacity: 0.5;
+}
+.login-logo{
+  position: absolute;
+  left:0;
+  right:0;
+  top: 60%;
+  bottom: 50%;
+  transform: translateY(-50% , -50%);
+  font-size:45px;
+  opacity: 0.2 !important;
+  
+
+}
+.login a{
+  color: white !important;
+  opacity: 0.5;
 }
 
-@media only screen and (max-width: 768px) {
-  section {
-    padding: 30px 0px;
-  }
+.carimg2{
+  height: 400px;
+  border-radius: 10px;
+  width: auto;
+}
 
-  .section__title {
-    font-size: 1.6rem;
-  }
-
-  .section__subtitle {
-    font-size: 1.1rem;
-  }
+svg{
+  height:20px !important;
+  width : 20px !important;
+}
+a{
+  color: orangered !important;
 }

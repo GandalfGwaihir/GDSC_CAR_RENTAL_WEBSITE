@@ -1,176 +1,114 @@
-import React, {useEffect } from 'react' 
-import jwt_decode from "jwt-decode";
-import Helmet from "../components/Helmet/Helmet";
-import { Container, Row, Col } from "reactstrap";
-import '../styles/Home.css';
-import Header from '../components/Header/Header.jsx';
-import Footer from '../components/Footer/Footer.jsx';
-import Testimonial from '../components/UI/Testimonal';
+import React , {useState,useEffect} from 'react'
+import { useSelector , useDispatch } from 'react-redux'
+import DefaultLayout from '../components/DefaultLayout'
+import { getAllCars } from '../redux/actions/carsActions'
+import { Col, Row , Divider , DatePicker, Checkbox} from 'antd'
+import {Link} from 'react-router-dom'
+import Spinner from '../components/Spinner';
+import moment from 'moment'
+const {RangePicker} = DatePicker
+function Home() {
+    const {cars} = useSelector(state=>state.carsReducer)
+    const {loading} = useSelector(state=>state.alertsReducer)
+    const [totalCars , setTotalcars] = useState([])
+    const dispatch = useDispatch()
+    
 
+    useEffect(() => {
+        dispatch(getAllCars())
+    }, [])
 
-import Slider from './Slider';
-import BtnSlider from './BtnSlider';
-import Sidebar from '../components/UI/Sidebar'
-import "../styles/hero-slider.css"
-import HeroSlider from '../components/UI/HeroSlider';
-import "../styles/find-car-form.css";
-import FindCarForm from '../components/UI/FindCarForm';
-import ServicesList from "../components/UI/ServicesList";
-import "../styles/Services-list.css";
-import  bmw from "../assets/all-images/bmw.jpg";
-import  lamborghini from "../assets/all-images/lamborghini.jpg";
-import  tata from "../assets/all-images/tata.jpg";
-import  toyoto from "../assets/all-images/toyoto.jpg";
-import driveImg from "../assets/all-images/drive.jpg";
-import HomeSection from '../components/UI/HomeSection';
-import img1 from "../assets/all-images/img1.jpg";
+    useEffect(() => {
 
-
-
-const Home = () => {
-    return (
-        <>
-       
-       {/* ============= hero section =========== */}
-      <section className="p-0 hero__slider-section">
+        setTotalcars(cars)
         
-      <div className="comfort-panel">
-                 {/* <div className="comfort-pic">
-                 <img src={img1} alt="" className="comfortpanel-pic"/>
-                 </div> */}
-                   <HeroSlider/>
- 
-                 <div className="textpanel">
-                 <h4 className="comfort-head1">THE BEST WAY OF RENTING A CAR</h4>
- 
-                 <h2 className="comfort-head2">Need a ride? We have you all covered</h2>
-                 
-                 <button className="comfortBtn" > MORE ABOUT US
-                 
-                 </button>
-                 {/* <HeroSlider/> */}
-                 
-                 <img src="https://identityink.com/wp-content/uploads/2021/04/Group-8.png" alt="bluedots" className="bluedots1" />
-                 {/* <HeroSlider/> */}
-                 
- 
-                 
-                 </div>
-                 
-       
-             </div>
- 
-                 
-        {/* <div className='frontpagepara'>THE BEST WAY OF RENTING A CAR</div>
-        <div className="frontpagepara1">Need a ride? We have you all covered </div>
-        <div className="comfort-dec">
-                 <button className="comfortBtn">MORE ABOUT US
-                 
-                 </button>
-                 <img src="https://identityink.com/wp-content/uploads/2021/04/Group-8.png" alt="bluedots" className="bluedots" />
-                 </div> */}
-        {/* <img src="https://identityink.com/wp-content/uploads/2021/04/Group-8.png" alt="bluedots" className="bluedots" /> */}
-        
-        {/* <HeroSlider /> */}
-        
-        
+    }, [cars])
 
-        {/* <div className="hero__form">
-          <Container>
-            <Row className="form__row">
-              <Col lg="4" md="4">
-                <div className="find__cars-left">
-                  <h2>Find your best car </h2>
-                </div>
-              </Col>
 
-              {/* <Col lg="8" md="8" sm="12">
-                <FindCarForm />
-              </Col> */}
-            {/* </Row>
-          </Container>
-        </div> */}
-        <div className="popularname">
-      <div className="popularname1">Popular Brands
-      </div>
-      <div className="Mercedes">
-      <h2 className='car1'>MERCEDES</h2>
-      <img src={bmw} alt="" className='Mercedesimg' />
-      </div>
-      <div className="tesla">
-      <h2 className='car2'>TOYOTO</h2>
-      <img src={toyoto} alt="" className='toyotoimg' />
-      </div>
-      <div className="lamborgini">
-      <h2 className='car3'>LAMBORGHINI</h2>
-      <img src={lamborghini} alt="" />
-      </div>
-      <div className="tata">
-      <h2 className='car4'>TATA</h2>
-      <img src={tata} alt="" className='tataimg' />
-      
-      </div>
-    </div>
-      </section> 
-        {/* <Testimonial/> */}
-       
-        {/* <Slider/> */}
-        {/* ========== services section ============ */}
-      {/* <section>
-        <Container>
-          <Row>
-            <Col lg="12" className="mb-5 text-center">
-              <h6 className="section__subtitle">See our</h6>
-              <h2 className="section__title">Popular Services</h2>
-            </Col>
+    function setFilter(values){
 
-            <ServicesList />
-          </Row>
-        </Container>
-      </section> */}
-      {/* =========== testimonial section =========== */}
-      {/* <section>
-        <Container>
-          <Row>
-            <Col lg="12" className="mb-4 text-center">
-              <h6 className="section__subtitle">Our clients says</h6>
-              <h2 className="section__title">Testimonials</h2>
-            </Col>
+        var selectedFrom = moment(values[0] , 'MMM DD yyyy HH:mm')
+        var selectedTo = moment(values[1] , 'MMM DD yyyy HH:mm')
 
-            <Testimonial />
-          </Row>
-        </Container>
-      </section> */}
-      
-        {/* <div className="popularname">
-      <div className="popularname1">Popular Brands
-      </div>
-      <div className="Mercedes">
-      <h2 className='car1'>MERCEDES</h2>
-      <img src={bmw} alt="" className='Mercedesimg' />
-      </div>
-      <div className="tesla">
-      <h2 className='car2'>TOYOTO</h2>
-      <img src={toyoto} alt="" className='toyotoimg' />
-      </div>
-      <div className="lamborgini">
-      <h2 className='car3'>LAMBORGHINI</h2>
-      <img src={lamborghini} alt="" />
-      </div>
-      <div className="tata">
-      <h2 className='car4'>TATA</h2>
-      <img src={tata} alt="" className='tataimg' />
-      
-      </div>
-    </div> */}
-   
-        
-        </>
-      )
+        var temp=[]
+
+        for(var car of cars){
+
+              if(car.bookedTimeSlots.length == 0){
+                  temp.push(car)
+              }
+              else{
+
+                   for(var booking of car.bookedTimeSlots) {
+
+                       if(selectedFrom.isBetween(booking.from , booking.to) ||
+                       selectedTo.isBetween(booking.from , booking.to) || 
+                       moment(booking.from).isBetween(selectedFrom , selectedTo) ||
+                       moment(booking.to).isBetween(selectedFrom , selectedTo)
+                       )
+                       {
+
+                       }
+                       else{
+                           temp.push(car)
+                       }
+
+                   }
+
+              }
+
+        }
+
+
+        setTotalcars(temp)
+
+
     }
-    export default Home;
+
+    return (
+        <DefaultLayout>
+
+             <Row className='mt-3' justify='center'>
+                 
+                 <Col lg={20} sm={24} className='d-flex justify-content-left'>
+
+                     <RangePicker showTime={{format: 'HH:mm'}} format='MMM DD yyyy HH:mm' onChange={setFilter}/>
+                 
+                 </Col>
+
+             </Row>
+
+              {loading == true && (<Spinner/>)}
 
 
+              
+              <Row justify='center' gutter={16}>
 
-// export default Home;
+                   {totalCars.map(car=>{
+                       return <Col lg={5} sm={24} xs={24}>
+                            <div className="car p-2 bs1">
+                               <img src={car.image} className="carimg"/>
 
+                               <div className="car-content d-flex align-items-center justify-content-between">
+
+                                    <div className='text-left pl-2'>
+                                        <p>{car.name}</p>
+                                        <p> Rent Per Hour {car.rentPerHour} /-</p>
+                                    </div>
+
+                                    <div>
+                                        <button className="btn1 mr-2"><Link to={`/booking/${car._id}`}>Book Now</Link></button>
+                                    </div>
+
+                               </div>
+                            </div>
+                       </Col>
+                   })}
+
+              </Row>
+
+        </DefaultLayout>
+    )
+}
+
+export default Home
