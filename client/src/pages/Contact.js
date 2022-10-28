@@ -6,6 +6,7 @@ import CommonSection from "../components/UI/CommonSection";
 import Header from "../components/Header/Header";
 import "../styles/contact.css";
 
+import Footer from "../components/Footer/Footer";
 const socialLinks = [
   {
     url: "#",
@@ -93,6 +94,7 @@ const Contact = () => {
           </Row>
         </Container>
       </section>
+      <Footer/>
     </Helmet>
   );
 };

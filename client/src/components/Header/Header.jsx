@@ -6,7 +6,7 @@ import "../../styles/header.css";
 
 const navLinks = [
   {
-    path: "/admin",
+    path: "/home",
     display: "Home",
   },
   {
@@ -14,7 +14,7 @@ const navLinks = [
     display: "About",
   },
   {
-    path: "/cars",
+    path: "/",
     display: "Cars",
   },
   {

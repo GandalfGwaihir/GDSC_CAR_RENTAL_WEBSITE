@@ -1,7 +1,6 @@
 import React from "react";
 import { Menu, Dropdown, Button, Space , Row , Col } from "antd";
 import {Link} from 'react-router-dom'
-import Header from "./Header/Header";
 
 function DefaultLayout(props) {
     const user = JSON.parse(localStorage.getItem('user'))
@@ -23,14 +22,7 @@ function DefaultLayout(props) {
           Bookings
         </a>
       </Menu.Item>
-      <Menu.Item>
-        <a
-         
-          href="/admin"
-        >
-          Admin
-        </a>
-      </Menu.Item>
+      
       <Menu.Item onClick={()=>{
           localStorage.removeItem('user');
           window.location.href='/login'
@@ -41,16 +33,14 @@ function DefaultLayout(props) {
   );
   return (
     <div>
-      <Header />
-      <div className="">
-      
+      <div className="header bs1">
           <Row gutter={16} justify='center'>
               <Col lg={20} sm={24} xs={24}>
               <div className="d-flex justify-content-between">
-             <h1 ><b><Link to='/' style={{color:'orangered'}}>SheyCars</Link></b></h1>
+             
 
           <Dropdown overlay={menu} placement="bottomCenter">
-            <Button>{user.username}</Button>
+            <Button>User</Button>
           </Dropdown>
         </div>
               </Col>
@@ -59,16 +49,7 @@ function DefaultLayout(props) {
       </div>
       <div className="content">{props.children}</div>
 
-      <div className="footer text-center">
-      <hr />
-
-           <p>Desinged and Developed By</p>
-
-           
-
-           <p>SHEY</p>
-          
-      </div>
+    
     </div>
   );
 }
