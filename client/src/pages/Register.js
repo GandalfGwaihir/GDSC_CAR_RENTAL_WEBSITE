@@ -1,77 +1,68 @@
-import React, { useState } from "react";
-import "../styles/register.css"
-const Register = () => {
-
-    const [name, setName] = useState("");
-    const [email, setEmail] = useState("");
-    const [password, setPassword] = useState("");
-
-    async function registerUser(event) {
-
-        event.preventDefault();
-        const response = await fetch("http://localhost:1337/api/register", {
-            method: "POST",
-            headers: {
-                "Content-Type": "application/json",
-                
-                },
-                body: JSON.stringify({
-                    name,
-                    email,
-                    password,
-                    }),
-                });
-
-                const data = await response.json();
-                
-                if(data.status == 'ok'){
-                    alert('Registration Successful')
-                    window.location.href = '/login'
-                }
-            }
-    return (
-        <div className="register">
-            <div className="register-container">
-        <h1 className="register-header">Register</h1>
-
-        <form onSubmit={registerUser} className="register-form">
-            <label htmlFor="register-name">Name</label>
-            <br />
-            <input 
-                value={name} 
-                onChange={(e) => setName(e.target.value)}
-                type="text"
-                placeholder="Name"
-                className="register-name"
-            />
-            <br />
-            <label htmlFor="register-email">Email</label>
-            <br />
-            <input 
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-                type="email"
-                placeholder="Email"
-                className="register-email"
-            />
-            <br />
-            <label htmlFor="register-password">Password</label>
-            <br />
-            <input 
-                value={password}
-                onChange={(e) => setPassword(e.target.value)}
-                type="password"
-                placeholder="Password"
-                className="register-password"
-            />
-            <br />
-            <input type="submit" value="Register"
-            className="submit-btn" />
-
-        </form>
-        </div>
-        </div>
-    )
+import React from "react";
+import { Row, Col, Form, Input } from "antd";
+import { Link } from "react-router-dom";
+import {useDispatch , useSelector} from 'react-redux'
+import { userRegister } from "../redux/actions/userActions";
+import AOS from 'aos';
+import Spinner from '../components/Spinner';
+import 'aos/dist/aos.css'; // You can also use <link> for styles
+// ..
+AOS.init()
+function Register() {
+  const dispatch = useDispatch()
+  const {loading} = useSelector(state=>state.alertsReducer)
+    function onFinish(values) {
+           dispatch(userRegister(values))
+           console.log(values)
     }
+
+  return (
+    <div className="login">
+      {loading && (<Spinner />)}
+      <Row gutter={16} className="d-flex align-items-center">
+        <Col lg={16} style={{ position: "relative" }}>
+          <img 
+           className='w-100'
+           data-aos='slide-left'
+           data-aos-duration='1500'
+          src="https://images.unsplash.com/photo-1485291571150-772bcfc10da5?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=928&q=80" />
+          <h1 className="login-logo">SHEYCARS</h1>
+        </Col>
+        <Col lg={8} className="text-left p-5">
+          <Form layout="vertical" className="login-form p-5" onFinish={onFinish}>
+            <h1>Register</h1>
+            <hr />
+            <Form.Item
+              name="username"
+              label="Username"
+              rules={[{ required: true }]}
+            >
+              <Input />
+            </Form.Item>
+            <Form.Item
+              name="password"
+              label="Password"
+              rules={[{ required: true }]}
+            >
+              <Input />
+            </Form.Item>
+            <Form.Item
+              name="cpassword"
+              label="Confirm Password"
+              rules={[{ required: true }]}
+            >
+              <Input />
+            </Form.Item>
+
+            <button className="btn1 mt-2 mb-3">Register</button>
+            <br />
+
+            <Link to="/login">Click Here to Login</Link>
+          </Form>
+        </Col>
+      </Row>
+    </div>
+  );
+}
 
 export default Register;

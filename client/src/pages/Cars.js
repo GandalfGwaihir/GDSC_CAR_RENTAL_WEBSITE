@@ -1,84 +1,108 @@
+import React, { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
+import { useSelector, useDispatch } from "react-redux";
+import { deleteCar, getAllCars } from "../redux/actions/carsActions";
+import { Col, Row, Divider, DatePicker, Checkbox, Edit } from "antd";
 import "../styles/cars.css"
-import data from "../assets/data/MOCK_DATA.js"
-import React from "react"
-import { useState } from "react"
-import productCard from "./Productcard"
-
-import { Link } from "react-router-dom"
-
-export default function Cars() {
-   
-      const [searchterm,setSearchterm] = React.useState('')
+import Header from "../components/Header/Header"
+import Footer from "../components/Footer/Footer"
+import miles from "../assets/all-images/miles.png"
+import fuel from "../assets/all-images/fuel.png"
+import drive from "../assets/all-images/manualcar.jpg"
+import rupees from "../assets/all-images/rupees.png"
+import rate from "../assets/all-images/rating.png"
 
 
+const { RangePicker } = DatePicker;
+function AdminHome() {
+  const { cars } = useSelector((state) => state.carsReducer);
+  const { loading } = useSelector((state) => state.alertsReducer);
+  const [totalCars, setTotalcars] = useState([]);
+  const dispatch = useDispatch();
 
-    return(
+  useEffect(() => {
+    dispatch(getAllCars());
+  }, []);
+
+  useEffect(() => {
+    setTotalcars(cars);
+  }, [cars]);
+
+  return (
+    <>
+    <Header/>
+     <h1>Car Rental</h1>
+
+        {/* //car card */}
+      
         <div className="carspage">
-                <h1 className="cars-header">Car Rental</h1>
-
-                <input type="text"  className="searchbar" placeholder="Search" onChange={event => {
-                    setSearchterm(event.target.value)
-                }} />
-            <div className="cars">
-            
-
-                {data.filter((val)=>{
-                if(searchterm == ""){return val}
-                else if(val.brand.toLowerCase().includes(searchterm.toLowerCase()) || val.model.toLowerCase().includes(searchterm.toLowerCase())){
-                    return val
-                }
-            }).map((val,key) => {
-                return (
-                <div className="cards-container">
-                <div className="card" key={key}>
-                    
-               
-
-                <img src={val.image} alt="car-image" className="card-image" />
-                    {/* <p>Card ID:{val.id}</p> */}
-                <h8>Sports Car</h8>
-
-                <h4 className="card--header">{val.brand} {val.model}</h4>
-                <h3 className="card--price--rating">
-                    <div className="price">
-                        <img  src = "https://img.icons8.com/material-rounded/344/rupee.png" alt="price"  width="25" height="25"/>
-                        {val.price}
-                    </div>
-                    <div className="rating">
-                        <img src ="https://img.icons8.com/arcade/344/experimental-star-arcade.png" alt="star" width="25" height="25" class="pb-1.5" />
-                        {val.rating}
-                    </div>
-                </h3>
-                <hr />
+        {totalCars.map((car) => {
+          return (
                 
-                <div className="card-stats">
+            
+                <div className="cars-card">
+
+                {/* Car-Image */}
+                <div className="cars-image">
+                    <img src={car.image} alt="image" className="carsimg" />
+                </div>
+
+                {/* Car-headers */}
+                <div className="cars-headers">
+                    <p className="cartype">{car.carType}</p>
+                    <h1 className="carname">{car.name}</h1>
+                </div>
+
+                {/* Car-Price-Rating */}
+                <div className="cars-price-rating">
+                    
+                <div className="rupees">
+                    <img src={rupees} alt="rupees" className="rupees"/>
+                    <p className="carprice">{car.rentPerHour}<span>/Day</span>  </p>
+                </div>
+
+                <div className="rate">
+                    <img src={rate} alt="rating" className="rate"/>
+                    <p>{car.rating}</p>
+                </div>
+                </div>
+
+                <hr />
+
+                {/* Car-mileage-drive&fueltype */}
+                <div className="cars-miles-drive-fueltype">
                     <div className="miles">
-                    <img src="https://img.icons8.com/ios/344/speedometer.png" alt="miles" width="25" height="25" /> {val.miles}
+                    <img src={miles} alt="miles" className="miles"/>
+                    <p>{car.mileage}</p>
                     </div>
 
-                    <div className="auto">
-                    <img src="https://img.icons8.com/color/344/automatic-gearbox-warning.png" alt="auto" width="25" height="25" class="pb-1.5"/> Auto
+                    <div className="drive">
+                    <img src={drive} alt="drive" className="drive"/>
+                    <p>{car.driveType}</p>
                     </div>
 
-                    <div className="petrol">
-                    <img src="https://img.icons8.com/fluency/2x/gas-station.png" alt="petrol" width="25" height="25" /> Petrol
+                    <div className="fuel">
+                    <img src={fuel} alt="fuel" className="fuel"/>
+                    <p>{car.fuelType}</p>
                     </div>
                 </div>
 
-                <div className="cardBtn">
-                    <Link to="/productcard">
-                    <p className="cardBtn-text">
-                    Rent Now
-                    </p>
-                    </Link>
+
+                {/* Rent Now Button */}
+                <div className="carsBtn">
+                <Link to="/home" >
+                Rent Now
+                </Link>
                 </div>
 
                 </div>
-                </div>
-                )
-            })}
-            </div>
-            </div>
-        
-    )
+       );
+    })}
+    </div>          
+      
+    <Footer/>
+    </>
+  );
 }
+
+export default AdminHome;

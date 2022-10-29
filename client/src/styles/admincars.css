@@ -1,0 +1,29 @@
+.car{
+    border-radius: 5px;
+    margin-bottom: 50px;  
+    height: 200px;
+    transition: 0.3s;
+  }
+  .car:hover{
+    height :400px;
+  }
+  .car:hover > .car-content{
+  
+      opacity: 1;
+      transform : translateY(-40px)
+      
+  
+  }
+  .carimg{
+    height:180px;
+    width: auto;
+    width: 100%;
+    border-radius: 5px;
+    /* transform: translateY(-50px); */
+  }
+  .car-content{
+    transform: translateY(-100px);
+    opacity: 0;
+    transition: 0.3s;
+    margin-top: 50px;
+  }
