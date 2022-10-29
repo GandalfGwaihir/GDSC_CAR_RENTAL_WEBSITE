@@ -25,19 +25,36 @@ function AddCar() {
                        <Form className='bs1 p-2' layout='vertical' onFinish={onFinish}>
                            <h3>Add New Car</h3>
                            <hr />
-                           <Form.Item name='name' label='Car name' rules={[{required: true}]}>
-                               <Input/>
-                           </Form.Item>
+                            {/* Car Image */}
                            <Form.Item name='image' label='Image url' rules={[{required: true}]}>
                                <Input/>
                            </Form.Item>
+                            {/* Car Type */}
+                           <Form.Item name='carType' label='Car type' rules={[{required: true}]}>
+                               <Input/>
+                           </Form.Item>
+                            {/* Car Name */}
+                           <Form.Item name='name' label='Car name' rules={[{required: true}]}>
+                               <Input/>
+                           </Form.Item>
+                           {/* Car Rent */}
                            <Form.Item name='rentPerHour' label='Rent per hour' rules={[{required: true}]}>
                                <Input/>
                            </Form.Item>
-                           <Form.Item name='capacity' label='Capacity' rules={[{required: true}]}>
+                           {/* Rating */}
+                           <Form.Item name='rating' label='Car Rating (off 5)' rules={[{required: true}]}>
                                <Input/>
                            </Form.Item>
+                           {/* Mileage */}
+                           <Form.Item name='mileage' label='Car Mileage' rules={[{required: true}]}>
+                               <Input/>
+                           </Form.Item>
+                           {/* Fuel Type */}
                            <Form.Item name='fuelType' label='Fuel Type' rules={[{required: true}]}>
+                               <Input/>
+                           </Form.Item>
+                           {/* Drive Type */}
+                           <Form.Item name='driveType' label='Drive Type' rules={[{required: true}]}>
                                <Input/>
                            </Form.Item>
 

@@ -9,23 +9,17 @@ function DefaultLayout(props) {
         <Menu.Item>
         <a
          
-          href="/"
+          href="/admin/home"
         >
           Home
         </a>
       </Menu.Item>
-      <Menu.Item>
-        <a
-          
-          href="/userbookings"
-        >
-          Bookings
-        </a>
-      </Menu.Item>
+        
+      
       
       <Menu.Item onClick={()=>{
           localStorage.removeItem('user');
-          window.location.href='/login'
+          window.location.href='/admin'
       }}>
           <li style={{color:'orangered'}}>Logout</li>
       </Menu.Item>

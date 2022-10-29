@@ -1,117 +1,108 @@
-import React , {useState,useEffect} from 'react'
-import { useSelector , useDispatch } from 'react-redux'
-import DefaultLayout from '../components/DefaultLayout'
-import { getAllCars } from '../redux/actions/carsActions'
-import { Col, Row , Divider , DatePicker, Checkbox} from 'antd'
-import {Link} from 'react-router-dom'
-import Spinner from '../components/Spinner';
-import moment from 'moment'
-import Header from '../components/Header/Header'
-import Footer from '../components/Footer/Footer'
-const {RangePicker} = DatePicker
-function Home() {
-    const {cars} = useSelector(state=>state.carsReducer)
-    const {loading} = useSelector(state=>state.alertsReducer)
-    const [totalCars , setTotalcars] = useState([])
-    const dispatch = useDispatch()
-    
-
-    useEffect(() => {
-        dispatch(getAllCars())
-    }, [])
-
-    useEffect(() => {
-
-        setTotalcars(cars)
-        
-    }, [cars])
+import React, { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
+import { useSelector, useDispatch } from "react-redux";
+import { deleteCar, getAllCars } from "../redux/actions/carsActions";
+import { Col, Row, Divider, DatePicker, Checkbox, Edit } from "antd";
+import "../styles/cars.css"
+import Header from "../components/Header/Header"
+import Footer from "../components/Footer/Footer"
+import miles from "../assets/all-images/miles.png"
+import fuel from "../assets/all-images/fuel.png"
+import drive from "../assets/all-images/manualcar.jpg"
+import rupees from "../assets/all-images/rupees.png"
+import rate from "../assets/all-images/rating.png"
 
 
-    function setFilter(values){
+const { RangePicker } = DatePicker;
+function AdminHome() {
+  const { cars } = useSelector((state) => state.carsReducer);
+  const { loading } = useSelector((state) => state.alertsReducer);
+  const [totalCars, setTotalcars] = useState([]);
+  const dispatch = useDispatch();
 
-        var selectedFrom = moment(values[0] , 'MMM DD yyyy HH:mm')
-        var selectedTo = moment(values[1] , 'MMM DD yyyy HH:mm')
+  useEffect(() => {
+    dispatch(getAllCars());
+  }, []);
 
-        var temp=[]
+  useEffect(() => {
+    setTotalcars(cars);
+  }, [cars]);
 
-        for(var car of cars){
+  return (
+    <>
+    <Header/>
+     <h1>Car Rental</h1>
 
-              if(car.bookedTimeSlots.length == 0){
-                  temp.push(car)
-              }
-              else{
+        {/* //car card */}
+      
+        <div className="carspage">
+        {totalCars.map((car) => {
+          return (
+                
+            
+                <div className="cars-card">
 
-                   for(var booking of car.bookedTimeSlots) {
+                {/* Car-Image */}
+                <div className="cars-image">
+                    <img src={car.image} alt="image" className="carsimg" />
+                </div>
 
-                       if(selectedFrom.isBetween(booking.from , booking.to) ||
-                       selectedTo.isBetween(booking.from , booking.to) || 
-                       moment(booking.from).isBetween(selectedFrom , selectedTo) ||
-                       moment(booking.to).isBetween(selectedFrom , selectedTo)
-                       )
-                       {
+                {/* Car-headers */}
+                <div className="cars-headers">
+                    <p className="cartype">{car.carType}</p>
+                    <h1 className="carname">{car.name}</h1>
+                </div>
 
-                       }
-                       else{
-                           temp.push(car)
-                       }
+                {/* Car-Price-Rating */}
+                <div className="cars-price-rating">
+                    
+                <div className="rupees">
+                    <img src={rupees} alt="rupees" className="rupees"/>
+                    <p className="carprice">{car.rentPerHour}<span>/Day</span>  </p>
+                </div>
 
-                   }
+                <div className="rate">
+                    <img src={rate} alt="rating" className="rate"/>
+                    <p>{car.rating}</p>
+                </div>
+                </div>
 
-              }
+                <hr />
 
-        }
+                {/* Car-mileage-drive&fueltype */}
+                <div className="cars-miles-drive-fueltype">
+                    <div className="miles">
+                    <img src={miles} alt="miles" className="miles"/>
+                    <p>{car.mileage}</p>
+                    </div>
 
+                    <div className="drive">
+                    <img src={drive} alt="drive" className="drive"/>
+                    <p>{car.driveType}</p>
+                    </div>
 
-        setTotalcars(temp)
-
-
-    }
-
-    return (
-        <DefaultLayout>
-            <Header/>
-
-             <Row className='mt-3' justify='center'>
-                 
-                 <Col lg={20} sm={24} className='d-flex justify-content-left'>
-
-                     <RangePicker showTime={{format: 'HH:mm'}} format='MMM DD yyyy HH:mm' onChange={setFilter}/>
-                 
-                 </Col>
-
-             </Row>
-
-              {loading == true && (<Spinner/>)}
+                    <div className="fuel">
+                    <img src={fuel} alt="fuel" className="fuel"/>
+                    <p>{car.fuelType}</p>
+                    </div>
+                </div>
 
 
-              
-              <Row justify='center' gutter={16}>
+                {/* Rent Now Button */}
+                <div className="carsBtn">
+                <Link to="/home" >
+                Rent Now
+                </Link>
+                </div>
 
-                   {totalCars.map(car=>{
-                       return <Col lg={5} sm={24} xs={24}>
-                            <div className="car p-2 bs1">
-                               <img src={car.image} className="carimg"/>
-
-                               <div className="car-content d-flex align-items-center justify-content-between">
-
-                                    <div className='text-left pl-2'>
-                                        <p>{car.name}</p>
-                                        <p> Rent Per Hour {car.rentPerHour} /-</p>
-                                    </div>
-
-                                    <div>
-                                        <button className="btn1 mr-2"><Link to={`/booking/${car._id}`}>Book Now</Link></button>
-                                    </div>
-
-                               </div>
-                            </div>
-                       </Col>
-                   })}
-
-              </Row>
-                   <Footer />
-        </DefaultLayout>
-    )
+                </div>
+       );
+    })}
+    </div>          
+      
+    <Footer/>
+    </>
+  );
 }
 
-export default Home
+export default AdminHome;

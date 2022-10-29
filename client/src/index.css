@@ -16,9 +16,7 @@ code {
 .bs1{
   box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
 }
-.ant-row{
-  margin: 0 20 !important;
-}
+
 .spinner{
   position: absolute;
   top: 50%;
@@ -72,32 +70,7 @@ button{
 
 
 /* this is just for ui purpose , no functionality is related */
-.car{
-  border-radius: 5px;
-  margin-top: 100px;
-  height: 160px;
-  transition: 0.3s;
-}
-.car:hover{
-  height :220px;
-}
-.car:hover > .car-content{
 
-    opacity: 1;
-    transform : translateY(-40px)
-
-}
-.carimg{
-  height:180px;
-  width: auto;
-  border-radius: 5px;
-  transform: translateY(-50px);
-}
-.car-content{
-  transform: translateY(-200px);
-  opacity: 0;
-  transition: 0.3s;
-}
 .login{
   background-color: black;
   padding-top: 50px;

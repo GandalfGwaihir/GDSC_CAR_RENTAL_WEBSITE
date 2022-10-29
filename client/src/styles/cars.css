@@ -1,66 +1,73 @@
-*{
-margin:  0 0;
-box-sizing: border-box;
-text-decoration: none;
-list-style: none;
-}
-
 .carspage{
-    background-color: #CCCFD6;
-    padding: 20px;
-}
-
-.cars{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
+    font-size: 1.1em;
+    font-weight: bold;
     grid-template-rows: max-content;
+    padding: 50px;
+    background-color: #CCCFD6;
 }
 
-
-.card{
+.cars-card{
+    background-color: #fff;
     border-radius: 30px;
-    padding: 25px;
     width: 90%;
-    margin: 10px 0;
+    padding: 30px;
 }
 
-.card-image{
+.cars-image{
+    background-color: white;
+    padding: 20px;
+    height: 45%;
+    margin-top: 10px;
+    border-radius: 30px;
+}
+.carsimg{
     width: 100%;
-    background-color: grey;
 }
-.card--price--rating{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+
+.cars-headers{
+    /* margin-top: 10px; */
+    text-align: left;
+    margin-left: 10px;
 }
-.card-stats{
+.carname{
+    font-weight: bolder;
+}
+.carprice{
+    font-weight: bolder;
+    color:#ED8802;
+}
+span{
+    color: black;
+}
+
+.cars-price-rating{
     
     display: flex;
     align-items: center;
     justify-content: space-between;
+    margin-left: 25px;
+    font-size: 1.2em;
 }
-.cardBtn{
-    background-color: #1E3658;
-    text-align: center;
-    width: 50%;
-    margin: 15px auto;
-    border-radius: 15px;
+
+.cars-miles-drive-fueltype{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
-.cardBtn-text{
+.rupees,.rate,.miles,.drive,.fuel{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30%;
+}
+.carsBtn{
+    background-color:#1E3658;
+    margin: 10%;
+    border: none;
+    border-radius: 20px;
+    padding: 10px;
     
-    text-decoration: none;
-    color: white;
-    margin: 5px auto;
-}
-.price{
-    color: #ED8802;
-}
-
-
-.price-icon{
-    color: #ED8802;
-    font-size: 20px;
-    margin-right: 5px;
-    width: 1 px;
-    height: 1 px;
+    color: #fff;
 }
