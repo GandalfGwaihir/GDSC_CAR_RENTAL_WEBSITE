@@ -90,7 +90,7 @@ function AdminHome() {
 
                 {/* Rent Now Button */}
                 <div className="carsBtn">
-                <Link to="/home" >
+                <Link to="#" >
                 Rent Now
                 </Link>
                 </div>
