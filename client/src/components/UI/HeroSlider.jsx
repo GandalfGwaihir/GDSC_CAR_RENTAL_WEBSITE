@@ -13,12 +13,12 @@ const HeroSlider = () => {
     autoplaySpeed: 3000,
     infinite: true,
     autoplay: true,
-    slidesToShow: 1,
-    slidesToScroll: 1,
+    slidesToShow: 4,
+    slidesToScroll: 4,
     pauseOnHover: false,
   };
   return (
-    <Slider {...settings} className="hero__slider">
+    <>
       <div className="slider__item slider__item-01 mt0">
         <Container>
           <div className="slider__content ">
@@ -57,7 +57,7 @@ const HeroSlider = () => {
           </div>
         </Container>
       </div>
-    </Slider>
+    </>
   );
 };
 
