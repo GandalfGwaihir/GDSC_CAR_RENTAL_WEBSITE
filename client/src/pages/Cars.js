@@ -90,9 +90,7 @@ function AdminHome() {
 
                 {/* Rent Now Button */}
                 <div className="carsBtn">
-                <Link to="#" >
-                Rent Now
-                </Link>
+                <a aria-label="Rent Now" href="https://wa.me/917620442958" alt="Rent Now" className="carsBtn-link">Rent Now</a>
                 </div>
 
                 </div>

@@ -1,5 +1,9 @@
 const express = require('express')
 const app = express()
+const body_parser = require("body-parser")
+
+
+
 const port = process.env.PORT || 5000
 const dbConnection = require('./db')
 app.use(express.json())

@@ -7,13 +7,24 @@
   margin: 15px;
 }
 
+.contactbg{
+  background-color: #284774;
+  padding: 50px;
+  margin-top: 0px;
+}
+
 .contact__btn {
   padding: 7px 15px;
-  background: #000d6b;
+  background: #253083;
   color: #fff;
   border: none;
   outline: none;
   border-radius: 15px;
+  margin: 20px;
+}
+
+.contact-header{
+  
 }
 
 @media only screen and (max-width: 768px) {

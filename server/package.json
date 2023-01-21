@@ -1,7 +1,7 @@
 {
-  "name": "sheycars",
+  "name": "GDSC_CAR_RENTAL_WEBSITE",
   "version": "1.0.0",
-  "description": "",
+  "description": "webhooks for whatsapp api",
   "main": "index.js",
   "engines": {
     "node": "15.7.0",

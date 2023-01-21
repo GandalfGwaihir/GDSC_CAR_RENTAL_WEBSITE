@@ -31,24 +31,25 @@ const Contact = () => {
     <Helmet title="Contact">
         <Header />
       <CommonSection title="Contact" />
-      <section>
+      <section className="contactbg">
         <Container>
           <Row>
             <Col lg="7" md="7">
-              <h6 className="fw-bold mb-4">Get In Touch</h6>
+              <h6 className="fw-bold mb-4 contact-header">Get In Touch</h6>
 
               <Form>
                 <FormGroup className="contact__form">
-                  <Input placeholder="Your Name" type="text" />
+                  <label htmlFor="name">Your Name</label>
+                  <Input placeholder="Your Name" type="text" name="name"/>
                 </FormGroup>
                 <FormGroup className="contact__form">
-                  <Input placeholder="Email" type="email" />
+                  <label htmlFor="email">Your Email</label>
+                  <Input name="email" placeholder="Email" type="email" />
                 </FormGroup>
                 <FormGroup className="contact__form">
+                  <label htmlFor="message">Your Message:</label>
                   <textarea
-                    rows="4"
-                    
-                    
+                    rows="4"                  
                     placeholder="Enter Message"
                     className="textarea"
                   ></textarea>
