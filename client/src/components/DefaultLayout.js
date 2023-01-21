@@ -17,12 +17,12 @@ function DefaultLayout(props) {
         
       
       
-      <Menu.Item onClick={()=>{
+      {/* <Menu.Item onClick={()=>{
           localStorage.removeItem('user');
           window.location.href='/admin'
       }}>
           <li style={{color:'orangered'}}>Logout</li>
-      </Menu.Item>
+      </Menu.Item> */}
     </Menu>
   );
   return (
@@ -31,11 +31,9 @@ function DefaultLayout(props) {
           <Row gutter={16} justify='center'>
               <Col lg={20} sm={24} xs={24}>
               <div className="d-flex justify-content-between">
-             
-
-          <Dropdown overlay={menu} placement="bottomCenter">
-            <Button>User</Button>
-          </Dropdown>
+                       
+            <Button href="/admin/home">Home</Button>
+          
         </div>
               </Col>
           </Row>

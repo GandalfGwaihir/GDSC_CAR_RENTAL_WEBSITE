@@ -18,7 +18,7 @@ export default function adminPanel(){
                 <p>Cars</p>
                 </Link>
             </div>
-            <div className="panelBtn">
+            {/* <div className="panelBtn">
                 <Link to="/admin/users" >
                 <p>Users</p>
                 </Link>
@@ -27,7 +27,7 @@ export default function adminPanel(){
                 <Link to="/admin/testimonials" >
                 <p>Testimonials</p>
                 </Link>
-            </div>
+            </div> */}
             </div>
             </div>
         </div>

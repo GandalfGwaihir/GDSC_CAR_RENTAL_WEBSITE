@@ -6,7 +6,6 @@
 
 .header__top__left {
   display: flex;
-  
   column-gap: 1rem;
 }
 
@@ -17,7 +16,7 @@
 .header__top__help {
   display: flex;
   align-items: center;
-  column-gap: 0.4rem;
+  /* column-gap: 0.4rem; */
 }
 
 .header__top__help i {
@@ -111,12 +110,10 @@
   padding: 15px 0px;
   background: #1E3658;
   display: flex;
-  
-  
   align-items: center;
   margin-right: 0px;
   justify-content: space-evenly;
-   left:80px; top:2px;
+   /* left:80px; top:2px; */
   
 }
 
