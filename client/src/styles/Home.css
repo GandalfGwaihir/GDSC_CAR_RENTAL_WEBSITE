@@ -14,6 +14,7 @@
 
 .home-header1{
   margin: 20% 0 20% 0;
+ width:100%;
 }
 
 .home-header2{
@@ -22,7 +23,7 @@
   color: #1E3658;
 }
 .bluedots{
-  width: 20%;
+  width: 100%;
 }
 
 
@@ -40,12 +41,32 @@
   border-radius: 30px;
 }
 
-.bluedots{
-  background-color: black;
-  position: relative;
-  left: 100px;
-}
+
 
 .panel-right{
   margin-right: 25px;
+}
+
+
+@media screen and (max-width: 680px) {
+  .panel-left{
+    display: flex;
+    flex-direction: column;
+  }
+  .panel-right{
+    display: block;
+  }
+  .pop-brands {
+      display: flex;
+      flex-direction: column;
+  }
+}
+@media screen and (max-width:800){
+  .hero{
+    display: flex;
+   
+   
+  }
+  
+  
 }
