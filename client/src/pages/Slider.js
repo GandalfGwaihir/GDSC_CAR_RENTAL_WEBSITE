@@ -1,7 +1,7 @@
 import React, {useState} from 'react'
-import "../styles/Slider.css"
-import BtnSlider from '../pages/BtnSlider'
-import dataSlider from '../pages/dataSlider'
+import '../styles/Slider.css'
+import BtnSlider from './BtnSlider'
+import dataSlider from './dataSlider'
 
 export default function Slider() {
 
@@ -38,7 +38,7 @@ export default function Slider() {
                     className={slideIndex === index + 1 ? "slide active-anim" : "slide"}
                     >
                         <img 
-                        src={process.env.PUBLIC_URL + `./assets/all-images/img${index + 1}.jpg`} 
+                        src={process.env.PUBLIC_URL + `/Imgs/img${index + 1}.jpg`} 
                         />
                     </div>
                 )
